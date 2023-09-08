@@ -6,11 +6,19 @@
     <title>Connect 4</title>
     <link rel="stylesheet" href="./connect4.css">
     <script src="./connect4.js"></script>
+    <script>
+        function handleReset(){
+            window.location.reload();
+        }
+    </script>
 </head>
 <body>
     <h1>Connect 4</h1>
     <h2 id="winner"></h2>
     <div id="board"></div>
+    <div>
+        <button class="button" onclick="handleReset()">Reset</button>
+    </div>
     <p><center>© Advait Gogte</center></p>
 </body>
 </html>
