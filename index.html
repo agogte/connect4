@@ -1,24 +1,40 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Connect 4</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./connect4.css">
-    <script src="./connect4.js"></script>
-    <script>
-        function handleReset(){
-            window.location.reload();
-        }
-    </script>
 </head>
 <body>
-    <h1>Connect 4</h1>
-    <h2 id="winner"></h2>
-    <div id="board"></div>
-    <div>
-        <button class="button" onclick="handleReset()">Reset</button>
-    </div>
-    <p><center>© Advait Gogte</center></p>
+    <main class="app">
+        <header class="app__header">
+            <h1>Connect&nbsp;4</h1>
+            <p class="tagline">Drop your discs. Get four in a row. Bragging rights included.</p>
+        </header>
+
+        <section class="status-bar" aria-live="polite">
+            <div class="turn-indicator" id="turn-indicator">
+                <span class="turn-disc" id="turn-disc"></span>
+                <span id="turn-text">Red's Turn</span>
+            </div>
+            <h2 id="winner" class="winner"></h2>
+        </section>
+
+        <div id="board" role="grid" aria-label="Connect 4 board"></div>
+
+        <div class="controls">
+            <button class="button" id="reset-button" type="button">↻ Reset</button>
+        </div>
+
+        <footer>
+            <p>© Advait Gogte</p>
+        </footer>
+    </main>
+
+    <script src="./connect4.js" defer></script>
 </body>
 </html>
